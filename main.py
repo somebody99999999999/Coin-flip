@@ -59,7 +59,7 @@ singleTyping("           '-------'\n\n")
 # singleTyping("1. Play The Game\n")
 # singleTyping("2. Credits\n")
 
-choice = input("\n Type Start to begin the game \n> ").strip().title()
+choice = input("\n Type Start to begin the game or Credits to see them \n> ").strip().title()
 
 # ==========================================
 #                PLAY GAME
@@ -156,6 +156,7 @@ if choice == 'Start':
         if command == "1":
 
             clear_screen()
+            # Controls how fast the text goes by in the terminal
             singleTyping("Flipping the coin", 0.15)
             singleTyping("...\n\n", 0.25)
 
@@ -342,3 +343,6 @@ if choice == 'Start':
         else:
             print("\nInvalid option! Choose 1-7.")
             time.sleep(1)
+
+elif choice == 'Credits':
+    " "
