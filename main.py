@@ -346,3 +346,7 @@ if choice == 'Start':
 
 elif choice == 'Credits':
     os.system('cls||clear')
+    slowTyping("Credits", delay=0.1)
+    slowTyping("\n----------", delay=0.05)
+    slowTyping("\nDeveloper - Eduardo - R", delay=0.05)
+    slowTyping("\n I a bit of help and I got the inspiration for the project from Brian L.")
