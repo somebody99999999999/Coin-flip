@@ -56,16 +56,16 @@ singleTyping("         |  HEADS    |\n")
 singleTyping("         |  or TAILS |\n")
 singleTyping("          \\         /\n")
 singleTyping("           '-------'\n\n")
-singleTyping("1. Play The Game\n")
-singleTyping("2. Credits\n")
+# singleTyping("1. Play The Game\n")
+# singleTyping("2. Credits\n")
 
-choice = input("\nSelect an option (1 or 2)\n> ").strip()
+choice = input("\n Type Start to begin the game \n> ").strip().title()
 
 # ==========================================
 #                PLAY GAME
 # ==========================================
 
-if choice == '1':
+if choice == 'Start':
 
     clear_screen()
 
