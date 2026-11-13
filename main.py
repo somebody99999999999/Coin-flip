@@ -12,7 +12,7 @@ def clear_screen():
 
 
 # Displays text one character at a time.
-def singleTyping(text, delay=0.03):
+def slowTyping(text, delay=0.03):
     for char in text:
         print(char, end='', flush=True)
         time.sleep(delay)
@@ -47,17 +47,17 @@ def show_coin(side):
 
 clear_screen()
 
-singleTyping("-------------------------------------\n", 0.02)
-singleTyping("       Coin Flip: Lucky Streak\n", 0.04)
-singleTyping("-------------------------------------\n", 0.02)
-singleTyping("           .-------.\n")
-singleTyping("          /         \\\n")
-singleTyping("         |  HEADS    |\n")
-singleTyping("         |  or TAILS |\n")
-singleTyping("          \\         /\n")
-singleTyping("           '-------'\n\n")
-# singleTyping("1. Play The Game\n")
-# singleTyping("2. Credits\n")
+slowTyping("-------------------------------------\n", 0.02)
+slowTyping("       Coin Flip: Lucky Streak\n", 0.04)
+slowTyping("-------------------------------------\n", 0.02)
+slowTyping("           .-------.\n")
+slowTyping("          /         \\\n")
+slowTyping("         |  HEADS    |\n")
+slowTyping("         |  or TAILS |\n")
+slowTyping("          \\         /\n")
+slowTyping("           '-------'\n\n")
+# slowTyping("1. Play The Game\n")
+# slowTyping("2. Credits\n")
 
 choice = input("\n Type Start to begin the game or Credits to see them \n> ").strip().title()
 
@@ -69,7 +69,7 @@ if choice == 'Start':
 
     clear_screen()
 
-    singleTyping("Flipping into a world of luck...", 0.05)
+    slowTyping("Flipping into a world of luck...", 0.05)
     time.sleep(1)
 
     # Player statistics
@@ -157,8 +157,8 @@ if choice == 'Start':
 
             clear_screen()
             # Controls how fast the text goes by in the terminal
-            singleTyping("Flipping the coin", 0.15)
-            singleTyping("...\n\n", 0.25)
+            slowTyping("Flipping the coin", 0.15)
+            slowTyping("...\n\n", 0.25)
 
             # Choose heads or tails randomly.
             result = random.choice(["HEADS", "TAILS"])
@@ -333,8 +333,8 @@ if choice == 'Start':
         elif command == "7" or command == "quit":
 
             clear_screen()
-            singleTyping("The coin stops spinning...\n", 0.04)
-            singleTyping("Thanks for playing Lucky Streak!\n", 0.04)
+            slowTyping("The coin stops spinning...\n", 0.04)
+            slowTyping("Thanks for playing Lucky Streak!\n", 0.04)
             running = False
 
         # ----------------------------------
@@ -345,4 +345,4 @@ if choice == 'Start':
             time.sleep(1)
 
 elif choice == 'Credits':
-    " "
+    os.system('cls||clear')
