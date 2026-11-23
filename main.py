@@ -83,7 +83,7 @@ if choice == 'Start':
     # Upgrade variables
     multiplier = 0
     multiplier_level = 0
-    multiplier_cost = 10
+    multiplier_cost = 5
 
     jackpot_level = 0
     jackpot_cost = 25
@@ -159,7 +159,7 @@ if choice == 'Start':
 
             clear_screen()
             # Controls how fast the text goes by in the terminal
-            slowTyping("Flipping the coin now", 0.15)
+            slowTyping("Flipping the coin now", 0.20)
             slowTyping("...\n\n", 0.25)
 
             # Choose heads or tails randomly.
@@ -210,7 +210,7 @@ if choice == 'Start':
                 multiplier += 1.5
 
                 # Each new upgrade costs more.
-                multiplier_cost = int(multiplier_cost * 1.5)
+                multiplier_cost = int(multiplier_cost * 2)
 
                 print("\nMultiplier upgraded!")
                 print(f"New multiplier: x{multiplier:.1f}")
