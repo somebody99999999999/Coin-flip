@@ -332,7 +332,7 @@ if choice == 'Start':
         elif command == "7" or command == "quit":
 
             clear_screen()
-            slowTyping("The coin has stop spinning...\n", 0.04)
+            slowTyping("The coin stops spinning...\n", 0.04)
             slowTyping("Thanks for playing Jackpot!\n", 0.04)
             running = False
 
