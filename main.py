@@ -79,7 +79,7 @@ if choice == 'Start':
     tails_count = 0
 
     # Upgrade variables
-    multiplier = 1.0
+    multiplier = 0
     multiplier_level = 0
     multiplier_cost = 10
 
@@ -348,4 +348,4 @@ elif choice == 'Credits':
     slowTyping("\n-----------", delay=0.05)
     slowTyping("\nDeveloper - Eduardo R", delay=0.05)
     slowTyping("\nPast names \LUCKY STREAK", delay=0.05)
-    # slowTyping("\nI had gotten the inspiration for this project from Brian L's Honey The Bunny Game \nSo props to him for the great idea \n", delay=0.09)
+    # slowTyping("\nI had gotten the inspiration for this project from Brian Le's Honey The Bunny Game \nSo I'll just like to thank him for the idea and the inspiration", delay=0.09). 
