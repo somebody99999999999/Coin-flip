@@ -221,7 +221,7 @@ if choice == 'Start':
             time.sleep(1.2)
 
         # ----------------------------------
-        # OPTION 3: Jackpot UPGRADE
+        # OPTION 3: JACKPOT UPGRADES
         # ----------------------------------
         elif command == "3":
 
@@ -229,7 +229,7 @@ if choice == 'Start':
                 coins -= jackpot_cost
                 jackpot_level += 1
 
-                # Increase the next upgrade price.
+
                 jackpot_cost = int(jackpot_cost * 3)
 
                 print("\nJackpot upgraded!")
