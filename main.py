@@ -196,6 +196,7 @@ if choice == 'Start':
 
             input("\nPress Enter to continue...")
 
+        # ----------------------------------
         # OPTION 2: MULTIPLIER UPGRADE
         # ----------------------------------
         elif command == "2":
@@ -216,7 +217,7 @@ if choice == 'Start':
             time.sleep(1.2)
 
         # ----------------------------------
-        # OPTION 3: jackpot UPGRADE
+        # OPTION 3: Jackpot UPGRADE
         # ----------------------------------
         elif command == "3":
 
