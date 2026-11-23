@@ -115,12 +115,12 @@ if choice == 'Start':
         print(f"Coins: {coins}")
         print(f"Total Flips: {total_flips}")
         print(f"Heads: {heads_count}")
-        print(f"Tails: {tails_count}")
+        print(f"Tails: {tails_count}\n")
         print(f"Multiplier: x{multiplier:.1f}")
-        print(f"Jackpot Level: {jackpot_level}")
+        print(f"Jackpot Level: {jackpot_level}\n")
         print(f"Prestige Points: {prestige_points}")
         print(f"Prestige Bonus: x{prestige_bonus:.2f}")
-        print(f"Prestige At: {prestige_requirement} coins")
+        print(f"You Can Prestige At: {prestige_requirement} coins")
 
         # Show result percentages after the first flip.
         if total_flips > 0:
