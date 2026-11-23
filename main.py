@@ -150,6 +150,7 @@ if choice == 'Start':
 
         command = input("\nChoose an option\n> ").strip().lower()
 
+        # ----------------------------------
         # OPTION 1: FLIP THE COIN
         # ----------------------------------
         if command == "1":
@@ -204,7 +205,7 @@ if choice == 'Start':
             if coins >= multiplier_cost:
                 coins -= multiplier_cost
                 multiplier_level += 1
-                multiplier += 0.5
+                multiplier += 1.5
 
                 # Each new upgrade costs more.
                 multiplier_cost = int(multiplier_cost * 1.5)
@@ -287,6 +288,7 @@ if choice == 'Start':
                 print("\nPRESTIGE SUCCESSFUL!")
                 print(f"Prestige points: {prestige_points}")
                 print("Your permanent bonus has increased!")
+
             else:
                 print(
                     f"\nYou need {prestige_requirement} coins "
@@ -300,10 +302,8 @@ if choice == 'Start':
         # ----------------------------------
         elif command == "6":
 
-            confirm = input(
-                "Reset all progress? Type yes to confirm: "
-            ).strip().lower()
-
+            confirm = input("Reset all progress? Type yes to confirm: ").strip().lower()
+            
             if confirm == "yes":
                 coins = 0
                 total_flips = 0
@@ -342,6 +342,7 @@ if choice == 'Start':
         else:
             print("\nInvalid option! Choose 1-7.")
             time.sleep(1)
+
 
 elif choice == 'Credits':
     os.system('cls||clear')
