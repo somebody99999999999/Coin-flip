@@ -333,7 +333,7 @@ if choice == 'Start':
 
             clear_screen()
             slowTyping("The coin stops spinning...\n", 0.04)
-            slowTyping("Thanks for playing Jackpot!\n", 0.04)
+            slowTyping("\nThanks for playing Jackpot!\n\n", 0.04)
             running = False
 
         # ----------------------------------
