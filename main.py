@@ -140,7 +140,7 @@ if choice == 'Start':
             f" - Cost: {multiplier_cost} coins"
         )
         print(
-            f"3. jackpot Upgrade - Level {jackpot_level}"
+            f"3. Jackpot Upgrade - Level {jackpot_level}"
             f" - Cost: {jackpot_cost} coins"
         )
         print("4. View Stats")
@@ -229,7 +229,7 @@ if choice == 'Start':
                 # Increase the next upgrade price.
                 jackpot_cost = int(jackpot_cost * 1.6)
 
-                print("\njackpot upgraded!")
+                print("\nJackpot upgraded!")
                 print("Your chance of a bonus is now higher!")
             else:
                 print("\nNot enough coins!")
