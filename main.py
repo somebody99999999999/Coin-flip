@@ -74,13 +74,13 @@ if choice == 'Start':
     slowTyping("Beginning the game...", 0.05)
     time.sleep(1)
 
-    # Player statistics
+    # Player statistics - stats
     coins = 0
     total_flips = 0
     heads_count = 0
     tails_count = 0
 
-    # Upgrade variables
+    # Upgrade variables - Upgrades
     multiplier = 1
     multiplier_level = 0
     multiplier_cost = 5
@@ -88,11 +88,11 @@ if choice == 'Start':
     jackpot_level = 0
     jackpot_cost = 25
 
-    # Prestige variables
+    # Prestige variables - Prestige
     prestige_points = 0
     prestige_requirement = 1000
 
-    # Main game loop
+    # Main game loop - The whole game
     running = True
 
     while running:
@@ -122,7 +122,7 @@ if choice == 'Start':
         print(f"Prestige Bonus: x{prestige_bonus:.2f}")
         print(f"You Can Prestige At: {prestige_requirement} coins\n")
 
-        # Show result percentages after the first flip.
+        # Show the result percentages after the first flip.
         if total_flips > 0:
             print(
                 f"Heads Rate: "
@@ -158,14 +158,15 @@ if choice == 'Start':
         if command == "1":
 
             clear_screen()
-            # Controls how fast the text goes by in the terminal
+            
+            # Controls how fast the text goes by in the terminal - the 0.20 and beyond
             slowTyping("Flipping the coin now", 0.20)
             slowTyping("...\n\n", 0.25)
 
             # Choose heads or tails randomly.
             result = random.choice(["HEADS", "TAILS"])
 
-            # Update flip statistics.
+            # Update the flip statistics - stats
             total_flips += 1
 
             if result == "HEADS":
@@ -179,7 +180,7 @@ if choice == 'Start':
                 int(multiplier * prestige_bonus)
             )
 
-            # jackpot upgrades provides a better chance for bonus coins.
+            # Jackpot upgrades provides a better chance for bonus coins - extra coins.
             jackpot_chance = min(10 + jackpot_level * 5, 50)
 
             print("-------------------------------------")
@@ -209,7 +210,7 @@ if choice == 'Start':
                 multiplier_level += 1
                 multiplier += 1.5
 
-                # Each new upgrade costs more.
+                # How each new upgrade costs more.
                 multiplier_cost = int(multiplier_cost * 2)
 
                 print("\nMultiplier upgraded!")
