@@ -2,6 +2,9 @@ import os
 import time
 import random
 
+# Just removes the dumb text that just appears at the top of the terminal
+os.system('cls' if os.name == 'nt' else 'clear')
+
 # ==========================================
 #             COIN FLIP: JACKPOT
 # ==========================================
@@ -56,8 +59,7 @@ slowTyping("         |  HEADS    |\n")
 slowTyping("         |  or TAILS |\n")
 slowTyping("          \\         /\n")
 slowTyping("           '-------'\n\n")
-# slowTyping("1. Play The Game\n")
-# slowTyping("2. Credits\n")
+
 
 choice = input("\n Type Start to begin the game or Credits to see them \n> ").strip().title()
 
@@ -115,7 +117,7 @@ if choice == 'Start':
         print(f"Heads: {heads_count}")
         print(f"Tails: {tails_count}")
         print(f"Multiplier: x{multiplier:.1f}")
-        print(f"jackpot Level: {jackpot_level}")
+        print(f"Jackpot Level: {jackpot_level}")
         print(f"Prestige Points: {prestige_points}")
         print(f"Prestige Bonus: x{prestige_bonus:.2f}")
         print(f"Prestige At: {prestige_requirement} coins")
