@@ -286,7 +286,7 @@ if choice == 'Start':
                 jackpot_cost = 25
 
                 # Make the next prestige more difficult.
-                prestige_requirement *= 2
+                prestige_requirement *= 1.5
 
                 print("\nPRESTIGE SUCCESSFUL!")
                 print(f"Prestige points: {prestige_points}")
