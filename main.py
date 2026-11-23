@@ -246,10 +246,10 @@ if choice == 'Start':
 
             clear_screen()
             print("========== STATISTICS ==========")
-            print(f"Total flips: {total_flips}")
+            print(f"Total flips: {total_flips}\n")
             print(f"Heads: {heads_count}")
-            print(f"Tails: {tails_count}")
-            print(f"Coins: {coins}")
+            print(f"Tails: {tails_count}\n")
+            print(f"Coins: {coins}\n")
 
             if total_flips > 0:
                 print(
