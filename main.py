@@ -153,7 +153,7 @@ if choice == 'Start':
         command = input("\nChoose an option\n> ").strip().lower()
 
         # ----------------------------------
-        # OPTION 1: FLIP THE COIN
+        #      OPTION 1: FLIP THE COIN
         # ----------------------------------
         if command == "1":
 
@@ -201,7 +201,7 @@ if choice == 'Start':
             input("\nPress Enter to continue...")
 
         # ----------------------------------
-        # OPTION 2: MULTIPLIER UPGRADE
+        #    OPTION 2: MULTIPLIER UPGRADE
         # ----------------------------------
         elif command == "2":
 
@@ -221,7 +221,7 @@ if choice == 'Start':
             time.sleep(1.2)
 
         # ----------------------------------
-        # OPTION 3: JACKPOT UPGRADES
+        #    OPTION 3: JACKPOT UPGRADES
         # ----------------------------------
         elif command == "3":
 
@@ -240,7 +240,7 @@ if choice == 'Start':
             time.sleep(1.2)
 
         # ----------------------------------
-        # OPTION 4: VIEW STATISTICS
+        #     OPTION 4: VIEW STATISTICS
         # ----------------------------------
         elif command == "4":
 
@@ -267,7 +267,7 @@ if choice == 'Start':
             input("\nPress Enter to return to the shop...")
 
         # ----------------------------------
-        # OPTION 5: PRESTIGE
+        #        OPTION 5: PRESTIGE
         # ----------------------------------
         elif command == "5":
 
@@ -301,7 +301,7 @@ if choice == 'Start':
             time.sleep(1.8)
 
         # ----------------------------------
-        # OPTION 6: RESET THE GAME
+        #     OPTION 6: RESET THE GAME
         # ----------------------------------
         elif command == "6":
 
@@ -330,23 +330,29 @@ if choice == 'Start':
                 time.sleep(1)
 
         # ----------------------------------
-        # OPTION 7: QUIT
+        #        OPTION 7: QUIT
         # ----------------------------------
         elif command == "7":
 
             clear_screen()
             slowTyping("The coin stops spinning...\n", 0.04)
             slowTyping("\nThanks for playing Jackpot!\n\n", 0.04)
+            
+            # Just stops the main game from running
             running = False
 
-        # ----------------------------------
-        # INVALID INPUT
-        # ----------------------------------
+
+        # --------------------------------
+        #          INVALID INPUT
+        # --------------------------------
         else:
             print("\nInvalid option! Choose 1-7.")
             time.sleep(1)
 
 
+# ----------------------------------
+#            CREDITS
+# ----------------------------------
 elif choice == 'Credits':
     os.system('cls||clear')
     slowTyping("Credits", delay=0.1)
