@@ -3,7 +3,7 @@ import time
 import random
 
 # ==========================================
-#             COIN FLIP: LUCKY STREAK
+#             COIN FLIP: JACKPOT
 # ==========================================
 
 # Clears the terminal screen.
@@ -19,7 +19,7 @@ def slowTyping(text, delay=0.03):
 
 
 # ==========================================
-#                COIN ART
+#     How the coin looks on both sides
 # ==========================================
 
 def show_coin(side):
@@ -48,7 +48,7 @@ def show_coin(side):
 clear_screen()
 
 slowTyping("-------------------------------------\n", 0.02)
-slowTyping("       Coin Flip: Lucky Streak\n", 0.04)
+slowTyping("       Coin Flip: Jackpot\n", 0.04)
 slowTyping("-------------------------------------\n", 0.02)
 slowTyping("           .-------.\n")
 slowTyping("          /         \\\n")
@@ -69,7 +69,7 @@ if choice == 'Start':
 
     clear_screen()
 
-    slowTyping("Flipping into a world of luck...", 0.05)
+    slowTyping("Beginning the game...", 0.05)
     time.sleep(1)
 
     # Player statistics
@@ -83,8 +83,8 @@ if choice == 'Start':
     multiplier_level = 0
     multiplier_cost = 10
 
-    luck_level = 0
-    luck_cost = 25
+    jackpot_level = 0
+    jackpot_cost = 25
 
     # Prestige variables
     prestige_points = 0
@@ -100,7 +100,7 @@ if choice == 'Start':
         prestige_bonus = 1 + (prestige_points * 0.10)
 
         print("-------------------------------------")
-        print("        COIN FLIP: LUCKY STREAK")
+        print("        COIN FLIP: JACKPOT")
         print("-------------------------------------")
         print("              .-------.")
         print("             /         \\")
@@ -109,13 +109,13 @@ if choice == 'Start':
         print("              '-------'")
         print()
        
-        # Display player statistics.
+        # Display the players stats.
         print(f"Coins: {coins}")
         print(f"Total Flips: {total_flips}")
         print(f"Heads: {heads_count}")
         print(f"Tails: {tails_count}")
         print(f"Multiplier: x{multiplier:.1f}")
-        print(f"Luck Level: {luck_level}")
+        print(f"jackpot Level: {jackpot_level}")
         print(f"Prestige Points: {prestige_points}")
         print(f"Prestige Bonus: x{prestige_bonus:.2f}")
         print(f"Prestige At: {prestige_requirement} coins")
@@ -132,7 +132,7 @@ if choice == 'Start':
             )
 
         print("\n-------------------------------------")
-        print("            LUCKY SHOP")
+        print("            THE SHOP")
         print("-------------------------------------")
         print("1. Flip the Coin")
         print(
@@ -140,24 +140,23 @@ if choice == 'Start':
             f" - Cost: {multiplier_cost} coins"
         )
         print(
-            f"3. Luck Upgrade - Level {luck_level}"
-            f" - Cost: {luck_cost} coins"
+            f"3. jackpot Upgrade - Level {jackpot_level}"
+            f" - Cost: {jackpot_cost} coins"
         )
-        print("4. View Statistics")
+        print("4. View Stats")
         print("5. Prestige")
         print("6. Reset Game")
         print("7. Quit")
 
         command = input("\nChoose an option\n> ").strip().lower()
 
-        # ----------------------------------
         # OPTION 1: FLIP THE COIN
         # ----------------------------------
         if command == "1":
 
             clear_screen()
             # Controls how fast the text goes by in the terminal
-            slowTyping("Flipping the coin", 0.15)
+            slowTyping("Flipping the coin now", 0.15)
             slowTyping("...\n\n", 0.25)
 
             # Choose heads or tails randomly.
@@ -177,11 +176,11 @@ if choice == 'Start':
                 int(multiplier * prestige_bonus)
             )
 
-            # Luck upgrades provide a chance for bonus coins.
-            lucky_chance = min(10 + luck_level * 5, 50)
+            # jackpot upgrades provides a better chance for bonus coins.
+            jackpot_chance = min(10 + jackpot_level * 5, 50)
 
             print("-------------------------------------")
-            print(f"          YOU GOT {result}!")
+            print(f"          IT LANDED ON {result}!")
             print("-------------------------------------")
 
             show_coin(result)
@@ -189,15 +188,14 @@ if choice == 'Start':
             coins += reward
             print(f"\nYou earned {reward} coins!")
 
-            # Check whether the player got a lucky bonus.
-            if random.randint(1, 100) <= lucky_chance:
+            # Check whether the player got a jackpot bonus.
+            if random.randint(1, 100) <= jackpot_chance:
                 bonus = reward * 3
                 coins += bonus
-                print(f"LUCKY FLIP! Bonus +{bonus} coins!")
+                print(f"JACKPOT! Bonus +{bonus} coins!")
 
             input("\nPress Enter to continue...")
 
-        # ----------------------------------
         # OPTION 2: MULTIPLIER UPGRADE
         # ----------------------------------
         elif command == "2":
@@ -205,7 +203,7 @@ if choice == 'Start':
             if coins >= multiplier_cost:
                 coins -= multiplier_cost
                 multiplier_level += 1
-                multiplier += 1.5
+                multiplier += 0.5
 
                 # Each new upgrade costs more.
                 multiplier_cost = int(multiplier_cost * 1.5)
@@ -218,19 +216,19 @@ if choice == 'Start':
             time.sleep(1.2)
 
         # ----------------------------------
-        # OPTION 3: LUCK UPGRADE
+        # OPTION 3: jackpot UPGRADE
         # ----------------------------------
         elif command == "3":
 
-            if coins >= luck_cost:
-                coins -= luck_cost
-                luck_level += 1
+            if coins >= jackpot_cost:
+                coins -= jackpot_cost
+                jackpot_level += 1
 
                 # Increase the next upgrade price.
-                luck_cost = int(luck_cost * 1.6)
+                jackpot_cost = int(jackpot_cost * 1.6)
 
-                print("\nLuck upgraded!")
-                print("Your chance of a bonus is higher!")
+                print("\njackpot upgraded!")
+                print("Your chance of a bonus is now higher!")
             else:
                 print("\nNot enough coins!")
 
@@ -279,8 +277,8 @@ if choice == 'Start':
                 multiplier_level = 0
                 multiplier_cost = 10
 
-                luck_level = 0
-                luck_cost = 25
+                jackpot_level = 0
+                jackpot_cost = 25
 
                 # Make the next prestige more difficult.
                 prestige_requirement *= 2
@@ -315,8 +313,8 @@ if choice == 'Start':
                 multiplier_level = 0
                 multiplier_cost = 10
 
-                luck_level = 0
-                luck_cost = 25
+                jackpot_level = 0
+                jackpot_cost = 25
 
                 prestige_points = 0
                 prestige_requirement = 1000
@@ -333,8 +331,8 @@ if choice == 'Start':
         elif command == "7" or command == "quit":
 
             clear_screen()
-            slowTyping("The coin stops spinning...\n", 0.04)
-            slowTyping("Thanks for playing Lucky Streak!\n", 0.04)
+            slowTyping("The coin has stop spinning...\n", 0.04)
+            slowTyping("Thanks for playing Jackpot!\n", 0.04)
             running = False
 
         # ----------------------------------
@@ -347,6 +345,7 @@ if choice == 'Start':
 elif choice == 'Credits':
     os.system('cls||clear')
     slowTyping("Credits", delay=0.1)
-    slowTyping("\n----------", delay=0.05)
-    slowTyping("\nDeveloper - Eduardo - R", delay=0.05)
-    slowTyping("\n I a bit of help and I got the inspiration for the project from Brian L.")
+    slowTyping("\n-----------", delay=0.05)
+    slowTyping("\nDeveloper - Eduardo R", delay=0.05)
+    slowTyping("\nPast names \LUCKY STREAK", delay=0.05)
+    # slowTyping("\nI had gotten the inspiration for this project from Brian L's Honey The Bunny Game \nSo props to him for the great idea \n", delay=0.09)
