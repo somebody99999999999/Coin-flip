@@ -61,7 +61,7 @@ slowTyping("          \\         /\n")
 slowTyping("           '-------'\n\n")
 
 
-choice = input("\n Type Start to begin the game or Credits to see them \n> ").strip().title()
+choice = input("\nType Start to begin the game or Credits to see them \n\n> ").strip().title()
 
 # ==========================================
 #                PLAY GAME
@@ -81,7 +81,7 @@ if choice == 'Start':
     tails_count = 0
 
     # Upgrade variables
-    multiplier = 0
+    multiplier = 1
     multiplier_level = 0
     multiplier_cost = 5
 
@@ -120,7 +120,7 @@ if choice == 'Start':
         print(f"Jackpot Level: {jackpot_level}\n")
         print(f"Prestige Points: {prestige_points}")
         print(f"Prestige Bonus: x{prestige_bonus:.2f}")
-        print(f"You Can Prestige At: {prestige_requirement} coins")
+        print(f"You Can Prestige At: {prestige_requirement} coins\n")
 
         # Show result percentages after the first flip.
         if total_flips > 0:
@@ -229,7 +229,7 @@ if choice == 'Start':
                 jackpot_level += 1
 
                 # Increase the next upgrade price.
-                jackpot_cost = int(jackpot_cost * 1.6)
+                jackpot_cost = int(jackpot_cost * 3)
 
                 print("\nJackpot upgraded!")
                 print("Your chance of a bonus is now higher!")
