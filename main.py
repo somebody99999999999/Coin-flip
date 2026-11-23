@@ -86,7 +86,7 @@ if choice == 'Start':
     multiplier_cost = 5
 
     jackpot_level = 0
-    jackpot_cost = 25
+    jackpot_cost = 15
 
     # Prestige variables - Prestige
     prestige_points = 0
@@ -278,7 +278,7 @@ if choice == 'Start':
 
                 # Reset coins and upgrades.
                 coins = 0
-                multiplier = 1.0
+                multiplier = 1
                 multiplier_level = 0
                 multiplier_cost = 10
 
@@ -313,12 +313,12 @@ if choice == 'Start':
                 heads_count = 0
                 tails_count = 0
 
-                multiplier = 1.0
+                multiplier = 1
                 multiplier_level = 0
-                multiplier_cost = 10
+                multiplier_cost = 5
 
                 jackpot_level = 0
-                jackpot_cost = 25
+                jackpot_cost = 15
 
                 prestige_points = 0
                 prestige_requirement = 1000
