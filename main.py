@@ -45,7 +45,7 @@ def show_coin(side):
 
 
 # ==========================================
-#             MAIN MENU
+#          MAIN MENU - TITLE SCREEN
 # ==========================================
 
 clear_screen()
