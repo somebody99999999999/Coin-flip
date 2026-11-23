@@ -329,9 +329,9 @@ if choice == 'Start':
                 print("\nReset cancelled.")
                 time.sleep(1)
 
-        # ----------------------------------
-        #        OPTION 7: QUIT
-        # ----------------------------------
+        # --------------------------------
+        #          OPTION 7: QUIT
+        # --------------------------------
         elif command == "7":
 
             clear_screen()
@@ -346,8 +346,9 @@ if choice == 'Start':
         #          INVALID INPUT
         # --------------------------------
         else:
-            print("\nInvalid option! Choose 1-7.")
-            time.sleep(1)
+            print("\nInvalid option!\nYou need to Choose from 1-7.")
+
+            time.sleep(2)
 
 
 # ----------------------------------
