@@ -205,7 +205,7 @@ if choice == 'Start':
             if coins >= multiplier_cost:
                 coins -= multiplier_cost
                 multiplier_level += 1
-                multiplier += 0.5
+                multiplier += 1.5
 
                 # Each new upgrade costs more.
                 multiplier_cost = int(multiplier_cost * 1.5)
