@@ -81,7 +81,7 @@ if choice == 'Start':
     tails_count = 0
 
     # Upgrade variables - Upgrades
-    multiplier = 1
+    multiplier = 1.5
     multiplier_level = 0
     multiplier_cost = 5
 
