@@ -249,7 +249,7 @@ if choice == 'Start':
             print(f"Total flips: {total_flips}\n")
             print(f"Heads: {heads_count}")
             print(f"Tails: {tails_count}\n")
-            print(f"Coins: {coins}\n")
+            print(f"Current Coins: {coins}\n")
 
             if total_flips > 0:
                 print(
@@ -261,7 +261,7 @@ if choice == 'Start':
                     f"{tails_count / total_flips * 100:.1f}%"
                 )
             else:
-                print("You must first flip the coin to begin!")
+                print("You must flip the coin to begin!")
 
             print("================================")
             input("\nPress Enter to return to the shop...")
@@ -298,7 +298,7 @@ if choice == 'Start':
                     f"to prestige!"
                 )
 
-            time.sleep(1.8)
+            time.sleep(1.44)
 
         # ----------------------------------
         #     OPTION 6: RESET THE GAME
