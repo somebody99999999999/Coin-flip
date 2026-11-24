@@ -261,7 +261,7 @@ if choice == 'Start':
                     f"{tails_count / total_flips * 100:.1f}%"
                 )
             else:
-                print("Flip the coin to begin!")
+                print("You must first flip the coin to begin!")
 
             print("================================")
             input("\nPress Enter to return to the shop...")
@@ -274,11 +274,11 @@ if choice == 'Start':
             if coins >= prestige_requirement:
 
                 # Prestige increases permanent bonus points.
-                prestige_points += 1
+                prestige_points += 1.5
 
                 # Reset coins and upgrades.
                 coins = 0
-                multiplier = 1
+                multiplier = 1.5
                 multiplier_level = 0
                 multiplier_cost = 10
 
@@ -313,7 +313,7 @@ if choice == 'Start':
                 heads_count = 0
                 tails_count = 0
 
-                multiplier = 1
+                multiplier = 1.5
                 multiplier_level = 0
                 multiplier_cost = 5
 
@@ -324,10 +324,10 @@ if choice == 'Start':
                 prestige_requirement = 1000
 
                 print("\nGame reset successfully!")
-                time.sleep(1)
+                time.sleep(1.35)
             else:
                 print("\nReset cancelled.")
-                time.sleep(1)
+                time.sleep(1.25)
 
         # --------------------------------
         #          OPTION 7: QUIT
